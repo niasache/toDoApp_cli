@@ -1,9 +1,9 @@
-def get_todos():
-    with open("todos.txt", 'r') as file:
+def get_todos(filepath="todos.txt"):
+    with open(filepath, 'r') as file:
         todos = file.readlines()
     return todos
 
 
-def write_todos(todos):
-    with open("todos.txt", 'w') as file:
+def write_todos(todos, filepath="todos.txt"):
+    with open(filepath, 'w') as file:
         file.writelines(todos)
